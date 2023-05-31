@@ -1,0 +1,35 @@
+<main>
+    <div class="p-5 mb-4 bg-dark rounded-3">
+        <div class="container-fluid py-5">
+            <h3 class="text-light"> Novo Aluno: </h3>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card col align-self-center bg-secondary" style="margin: 1rem; margin">
+                        <div class="card mt-4 bg-secondary">
+                            <div class="card-body bg-secondary">
+                                <form action="/rota_aluno/aluno/nova" method="POST">
+                                    <label for="matricula">matricula: </label>
+                                    <input type="text" id="matricula" name="matricula"
+                                        placeholder="Digite sua matricula" class="form-control">
+                                    <br>
+                                    <label for="nome">nome: </label>
+                                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome"
+                                        class="form-control">
+                                    <br>
+                                    <label for="fk_turma">Turma:</label>
+                                    <select name="fk_turma" id="fk_turma" class="custom-select">
+                                        {{#each turmas}}
+                                        <option value="{{id_turma}}">{{descricao}}</o ption>
+                                            {{else}}
+                                        <option value="0">Nenhuma Turma registrado</op tion>
+                                            {{/each}}
+                                    </select>
+                                    <button type="submit" class="btn btn-success mt-3">Criar Aluno</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>

@@ -1,0 +1,38 @@
+<main>
+    <div class="p-5 mb-4 bg-dark rounded-3">
+        <div class="container-fluid py-5">
+            <h2 class="text-light">Lista de Aluno</h2>
+            <hr>
+            <a href="/rota_aluno/aluno/add">
+                <button class="btn btn-success">Novo aluno</button></a>
+            {{#each alunos}}
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card col align-self-center bg-secondary" style="margin: 1rem; margin">
+                        <div class="card mt-4 bg-secondary">
+                            <div class="card-body bg-secondary">
+                                <h4><b>ID:</b>{{id_aluno}}</h4>
+                                <small><b>matricula:</b> {{matricula}} </small><br>
+                                <small><b>nome:</b> {{nome}} </small><br>
+                                <small><b>turma:</b> {{descricao}} </small><br>
+                                <!--Botão para editar Aluno-->
+                                <a href="/rota_aluno/editar_aluno/{{id_aluno}}">
+                                    <button class="btn btn-success mt-3">
+                                        Editar aluno
+                                    </button>
+                                </a>
+                                <!--botão para deletar aluno-->
+                                <a href="/rota_aluno/deletar_aluno/{{id_aluno}}">
+                                    <button class="btn btn-danger mt-3">
+                                        Deletar aluno
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</main>

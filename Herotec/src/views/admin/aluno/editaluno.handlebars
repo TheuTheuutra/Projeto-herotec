@@ -1,0 +1,38 @@
+<main>
+    <div class="p-5 mb-4 bg-dark rounded-3">
+        <div class="container-fluid py-5">
+            <h3 class="text-light"> Editar Turma: </h3>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card col align-self-center bg-secondary" style="margin: 1rem; margin">
+                        <div class="card mt-4 bg-secondary">
+                            <div class="card-body bg-secondary">
+                                <form action=" /rota_aluno/aluno/editar_aluno" method="POST">
+                                    {{#each alunos}}
+                                    <label for="id_aluno">ID:</label>
+                                    <input type="text" name="id_aluno" readonly="true" class="form-control"
+                                        value="{{id_aluno}}"><br>
+                                    <label for="matricula">Matricula: </label>
+                                    <input type="text" id="matricula" name="matricula" class="form-control"
+                                        value="{{matricula}}"><br>
+                                    <label for="nome">Nome: </label>
+                                    <input type="text" id="nome" name="nome" class="form-control" value="{{nome}}"><br>
+                                    {{/each}}
+                                    <label for="turma">Turma:</label>
+                                    <select name="fk_turma" class="custom-select">
+                                        {{#each turmas}}
+                                        <option value="{{id_turma}}">{{descricao}}</option>
+                                        {{else}}
+                                        <option value="0">Nenhuma turma
+                                            registrada</option>
+                                        {{/each}}
+                                    </select>
+                                    <button type="submit" class="btn btn-success">Editar Aluno</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>

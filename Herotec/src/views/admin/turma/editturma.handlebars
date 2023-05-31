@@ -1,0 +1,22 @@
+<main>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h3> Editar Turma: </h3>
+            <div class="card">
+                <div class="card-body">
+                    <form action="/rota_turma/turma/editar_turma" method="POST">
+                        {{#each turmas}}
+                        <label for="id_turma">ID: </label>
+                        <input type="text" name="id_turma" readonly="true" class="form-control" value="{{id_turma}}">
+                        <br>
+                        <label for="descricao">Descrição: </label>
+                        <input type="text" id="descricao" name="descricao" class="form-control" value="{{descricao}}">
+                        <br>
+                        <button type="submit" class="btn btnsuccess">Editar turma</button>
+                        {{/each}}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
