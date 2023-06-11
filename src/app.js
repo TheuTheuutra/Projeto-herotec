@@ -15,6 +15,9 @@ app.set('view engine', 'handlebars');
 app.use('/public/css', express.static('public/bootstrap/css'));
 app.use('/public/js', express.static('public/bootstrap/js'));
 app.use('/public/img', express.static('public/img'));
+app.use('/style', express.static('public/css'));
+app.use('/script', express.static('public/js'));
+
 
 //Remanejando Rotas admin
 app.use('/', admin);

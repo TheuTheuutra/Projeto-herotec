@@ -1,5 +1,6 @@
 const db = require('./db');
-//reproduzindo a tabela Aluno
+
+//reproduzindo a tabela Login
 const Login = db.sequelize.define('Login', {
     IDlogin: {
         type: db.Sequelize.INTEGER,
