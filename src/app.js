@@ -20,9 +20,9 @@ app.use('/public/img', express.static('public/img'));
 app.use('/', admin);
 
 //Remanejando Rotas de aluno
-app.use('/rota_aluno', rota_aluno);
-//Remanejando Rotas de turma
-app.use('/rota_turma', rota_turma);
+// app.use('/rota_aluno', rota_aluno);
+// //Remanejando Rotas de turma
+// app.use('/rota_turma', rota_turma);
 const PORT = 8081;
 app.listen(PORT,()=>{
  console.log("Servidor Rodando");

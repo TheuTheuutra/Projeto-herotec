@@ -1,5 +1,6 @@
 const db = require('./db');
-//reproduzindo a tabela Aluno
+
+//reproduzindo a tabela Cliente
 const Cliente = db.sequelize.define('Cliente', {
     IDCliente: {
         type: db.Sequelize.INTEGER,
@@ -41,5 +42,5 @@ const Cliente = db.sequelize.define('Cliente', {
     //o nome da tabela sem o S
 }, { freezeTableName: true });
 
-Cliente.sync({force:true});
-//module.exports = Cliente;
+//Cliente.sync({force:true});
+module.exports = Cliente;

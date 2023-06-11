@@ -7,12 +7,12 @@ const Entrega = db.sequelize.define('Entrega', {
         allowNull: false,
         primaryKey: true
     },
-    IDEndereco: {
-        type: db.Sequelize.INTEGER,
-        references: { model: 'Endereco', key: 'IDEndereco' },
-        onDelete: 'CASCADE',
-        allowNull: false,
-    },
+    // IDEndereco: {
+    //     type: db.Sequelize.INTEGER,
+    //     references: { model: 'Endereco', key: 'IDEndereco' },
+    //     onDelete: 'CASCADE',
+    //     allowNull: false,
+    // },
     IDPedido: {
         type: db.Sequelize.INTEGER,
         references: { model: 'Pedido', key: 'IDPedido' },
@@ -22,4 +22,6 @@ const Entrega = db.sequelize.define('Entrega', {
     //freezeTableName: true define
     //o nome da tabela sem o S
 }, { freezeTableName: true });
+
+//Entrega.sync({force:true});
 module.exports = Entrega;

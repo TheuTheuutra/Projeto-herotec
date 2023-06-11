@@ -1,5 +1,5 @@
 const db = require('./db');
-//reproduzindo a tabela Aluno
+//reproduzindo a tabela Pedido
 const Pedido = db.sequelize.define('Pedido', {
     IDPedido: {
         type: db.Sequelize.INTEGER,
@@ -29,6 +29,6 @@ const Pedido = db.sequelize.define('Pedido', {
     //o nome da tabela sem o S
 }, { freezeTableName: true });
 
-Pedido.sync({force:true});
+//Pedido.sync({force:true});
 
-//module.exports = Pedido;
+module.exports = Pedido;

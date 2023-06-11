@@ -1,6 +1,7 @@
 const db = require('./db');
-//reproduzindo a tabela Aluno
-const Tipo_pagamento = db.sequelize.define('Tipo_pagamento', {
+
+//reproduzindo a tabela tipo_pagamento
+const TipoPagamento = db.sequelize.define('Tipo_pagamento', {
     IDTipo_pagamento: {
         type: db.Sequelize.INTEGER,
         autoIncrement: true,
@@ -35,6 +36,5 @@ const Tipo_pagamento = db.sequelize.define('Tipo_pagamento', {
     //o nome da tabela sem o S
 }, { freezeTableName: true });
 
-Tipo_pagamento.sync({force:true});
-
-//module.exports = Cliente;
+//TipoPagamento.sync({force:true});
+module.exports = TipoPagamento;

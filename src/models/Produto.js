@@ -1,34 +1,38 @@
 const db = require('./db');
-//reproduzindo a tabela Aluno
-const Endereco = db.sequelize.define('Endereco', {
-    IDEndereco: {
+
+//reproduzindo a tabela Produto
+const Produto = db.sequelize.define('Produto', {
+    IDProduto: {
         type: db.Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
-    UF: {
+    Tipo: {
         type: db.Sequelize.STRING
     },
-    Cidade: {
+    Marca: {
         type: db.Sequelize.STRING
     },
-    Rua: {
+    Nome: {
         type: db.Sequelize.STRING
     },
-    Numero: {
+    Preco: {
         type: db.Sequelize.STRING
     },
-    Complemento: {
+    QTD: {
         type: db.Sequelize.STRING
     },
-    Referencia: {
+    Cor: {
         type: db.Sequelize.STRING
     },
+    Descricao: {
+        type: db.Sequelize.STRING
+    }
     
     //freezeTableName: true define
     //o nome da tabela sem o S
 }, { freezeTableName: true });
 
-Endereco.sync({force:true});
-//module.exports = Endereco;
+//Produto.sync({force:true});
+module.exports = Produto;
