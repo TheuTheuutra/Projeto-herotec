@@ -1,3 +1,8 @@
+/*NavBar*/
+.logo img{
+    max-width: 50%;
+}
+
 .cards-wrapper {
     display: flex;
     justify-content: center;
