@@ -3,13 +3,17 @@
     max-width: 50%;
 }
 
+.opcao i{
+    max-width: 50%;
+}
+
 .cards-wrapper {
     display: flex;
     justify-content: center;
 }
 
 .card img {
-    max-width: 100%;
+    max-width: 50%;
     max-height: 100%;
 }
 
