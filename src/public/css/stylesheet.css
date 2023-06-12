@@ -3,6 +3,19 @@
     max-width: 50%;
 }
 
+.search-bar {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+.search-bar input {
+    width: 500px; /* Ajuste a largura conforme necessário */
+    /* Outros estilos do campo de pesquisa */
+    
+    justify-content: center;
+    align-items: center;
+  }
+
 .opcao i{
     max-width: 50%;
 }
@@ -19,8 +32,8 @@
 }
 
 .carousel-produto img{
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 
