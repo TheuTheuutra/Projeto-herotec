@@ -30,5 +30,4 @@ const Pedido = db.sequelize.define('Pedido', {
 }, { freezeTableName: true });
 
 //Pedido.sync({force:true});
-
 module.exports = Pedido;

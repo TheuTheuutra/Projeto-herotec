@@ -27,7 +27,7 @@ router.post('/add', async (req, res) => {
   
       await Cliente.create({
         Perfil: req.body.Perfil,
-        nome_completo: req.body.nome_completo,
+        Nome_completo: req.body.Nome_completo,
         CPF: req.body.cpf,
         data_nasc: req.body.data_nasc,
         IDLogin: login.IDlogin,
