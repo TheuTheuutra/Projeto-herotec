@@ -1,0 +1,42 @@
+<main>
+    <div class="p-5 mb-4 bg-dark rounded-3">
+        <div class="container-fluid py-5">
+            <h2 class="text-light">Lista de Aluno</h2>
+            <hr>
+            <a href="/rota_produto/produto/add">
+                <button class="btn btn-success">Novo aluno</button></a>
+            {{#each produtos}}
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card col align-self-center bg-secondary" style="margin: 1rem; margin">
+                        <div class="card mt-4 bg-secondary">
+                            <div class="card-body bg-secondary">
+                                
+                                <small><b>Nome:</b> {{Nome}} </small><br>
+                                <small><b>Tipo:</b> {{Tipo}} </small><br>
+                                <small><b>Marca:</b> {{Marca}} </small><br>
+                                <small><b>Preço:</b> {{Preco}} </small><br>
+                                <small><b>Quantidade:</b> {{QTD}} </small><br>
+                                <small><b>Cor:</b> {{Cor}} </small><br>
+                                <small><b>Descrição:</b> {{Descricao}} </small><br>
+                                <!--Botão para editar Aluno-->
+                                <a href="/rota_aluno/editar_aluno/{{id_aluno}}">
+                                    <button class="btn btn-success mt-3">
+                                        Editar aluno
+                                    </button>
+                                </a>
+                                <!--botão para deletar aluno-->
+                                <a href="/rota_aluno/deletar_aluno/{{id_aluno}}">
+                                    <button class="btn btn-danger mt-3">
+                                        Deletar aluno
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</main>
