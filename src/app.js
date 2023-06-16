@@ -3,7 +3,7 @@ const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser');
 const app = express();
 const rota_aluno = require('./routes/rota_aluno.js');
-const rota_turma = require('./routes/rota_turma.js');
+const rota_cliente = require('./routes/rota_cliente.js');
 const admin = require('./routes/admin.js');
 //const Post = require('./models/Post');
 //carregando o cabeçalho do html em outras páginas
@@ -23,7 +23,7 @@ app.use('/script', express.static('public/js'));
 app.use('/', admin);
 
 //Remanejando Rotas de aluno
-// app.use('/rota_aluno', rota_aluno);
+app.use('/rota_cliente', rota_cliente);
 // //Remanejando Rotas de turma
 // app.use('/rota_turma', rota_turma);
 const PORT = 8081;

@@ -7,9 +7,6 @@ const router = express.Router();
 router.get('/', (req, res) => {
     res.render("index");
 });
-router.get('/addcliente', (req, res) => {
-    res.render("admin/cliente/addcliente");
-});
 
 // router.get('/imagens', (req, res) => {
 //  res.render("escolas");

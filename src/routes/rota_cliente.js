@@ -5,7 +5,11 @@ const Login = require("../models/Login");
 const Endereco = require("../models/Endereco");
 const Cliente = require("../models/Cliente");
 
-router.post('/add_cliente', async (req, res) => {
+router.get('/cliente', (req, res) => {
+  res.render("admin/cliente/addcliente");
+});
+
+router.post('/add', async (req, res) => {
     try {
       const login = await Login.create({
         email: req.body.email,
@@ -30,8 +34,10 @@ router.post('/add_cliente', async (req, res) => {
         IDEndereco: endereco.IDEndereco
       });
   
-      res.redirect("index");
+      res.redirect("/");
     } catch (error) {
       res.send('Houve um erro: ' + error);
     }
   });
+
+  module.exports = router ;
