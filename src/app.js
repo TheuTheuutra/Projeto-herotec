@@ -2,7 +2,7 @@ const express = require("express");
 const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser');
 const app = express();
-const rota_aluno = require('./routes/rota_aluno.js');
+const rota_produto = require('./routes/rota_produto.js');
 const rota_cliente = require('./routes/rota_cliente.js');
 const admin = require('./routes/admin.js');
 //const Post = require('./models/Post');
@@ -25,7 +25,7 @@ app.use('/', admin);
 //Remanejando Rotas de aluno
 app.use('/rota_cliente', rota_cliente);
 // //Remanejando Rotas de turma
-// app.use('/rota_turma', rota_turma);
+app.use('/rota_produto', rota_produto);
 const PORT = 8081;
 app.listen(PORT,()=>{
  console.log("Servidor Rodando");
