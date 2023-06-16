@@ -1,4 +1,4 @@
-// const express = require('express');
+
 // const router = express.Router();
 // //vamos carregar nosso modelo 
 // const Turma = require("../models/Turma");
@@ -12,7 +12,7 @@
 //             res.render("admin/aluno/aluno",
 //                 { alunos: nalunos });
 //         });
-// });
+// });// const express = require('express');
 // //Deletando o aluno 
 // router.get('/deletar_aluno/:id', (req, res) => {
 //     Aluno.destroy({ where: { 'id_aluno': req.params.id } }).then(() => {

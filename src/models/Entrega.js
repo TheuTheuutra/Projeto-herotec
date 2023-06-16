@@ -7,12 +7,6 @@ const Entrega = db.sequelize.define('Entrega', {
         allowNull: false,
         primaryKey: true
     },
-    // IDEndereco: {
-    //     type: db.Sequelize.INTEGER,
-    //     references: { model: 'Endereco', key: 'IDEndereco' },
-    //     onDelete: 'CASCADE',
-    //     allowNull: false,
-    // },
     IDPedido: {
         type: db.Sequelize.INTEGER,
         references: { model: 'Pedido', key: 'IDPedido' },

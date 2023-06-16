@@ -5,8 +5,12 @@ const router = express.Router();
 //const Turma = require("../models/Turma");
 
 router.get('/', (req, res) => {
- res.render("index");
+    res.render("index");
 });
+router.get('/addcliente', (req, res) => {
+    res.render("admin/cliente/addcliente");
+});
+
 // router.get('/imagens', (req, res) => {
 //  res.render("escolas");
 // });

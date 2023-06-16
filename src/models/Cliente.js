@@ -8,9 +8,6 @@ const Cliente = db.sequelize.define('Cliente', {
         allowNull: false,
         primaryKey: true
     },
-    tipo_de_conta: {
-        type: db.Sequelize.STRING
-    },
     Perfil: {
         type: db.Sequelize.STRING
     },
