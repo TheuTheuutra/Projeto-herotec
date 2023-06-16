@@ -12,7 +12,24 @@ router.get('/produto', (req, res) => {
                 { produtos: nprodutos });
         });
 });
-
+router.get('/produto/add', (req, res) => {
+        res.render("admin/produto/addproduto");
+});
+router.post('/produto/nova', (req, res) => {
+    Produto.create({
+        Tipo: req.body.Tipo,
+        Marca: req.body.Marca,
+        Nome: req.body.Nome,
+        Preco: req.body.Preco,
+        QTD: req.body.QTD,
+        Cor: req.body.Cor,
+        Descricao: req.body.Descricao
+    }).then(() => {
+        res.redirect("/rota_produto/produto");
+    }).catch((erro) => {
+        res.send('Houve um erro: ' + erro);
+    });
+});
 
 
 module.exports = router

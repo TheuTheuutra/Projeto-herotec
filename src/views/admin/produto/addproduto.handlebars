@@ -1,0 +1,53 @@
+<main>
+    <div class="p-5 mb-4 bg-dark rounded-3">
+        <div class="container-fluid py-5">
+            <h3 class="text-light"> Novo Produto: </h3>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card col align-self-center bg-secondary" style="margin: 1rem; margin">
+                        <div class="card mt-4 bg-secondary">
+                            <div class="card-body bg-secondary">
+                                <form action="/rota_produto/produto/nova" method="POST">
+                                    <label for="Nome">Nome do produto: </label>
+                                    <input type="text" id="Nome" name="Nome" placeholder="Digite o nome do Produto"
+                                        class="form-control">
+                                    <br>
+                                    <label for="Tipo">Tipo do produto: </label>
+                                    <input type="text" id="Tipo" name="Tipo"
+                                        placeholder="Digite o tipo do Produto (placa mãe, processador, etc)"
+                                        class="form-control">
+                                    <br>
+                                    <label for="Marca">Marca do Produto: </label>
+                                    <input type="text" id="Marca" name="Marca"
+                                        placeholder="Digite a marca do produto"
+                                        class="form-control">
+                                    <br>
+                                    <label for="Preco">Preço do produto: </label>
+                                    <input type="text" id="Preco" name="Preco"
+                                        placeholder="Digite o preço do produto"
+                                        class="form-control">
+                                    <br>
+                                    <label for="QTD">Quantidade do produto: </label>
+                                    <input type="text" id="QTD" name="QTD"
+                                        placeholder="Digite a quantidade do produto"
+                                        class="form-control">
+                                    <br>
+                                    <label for="Cor">Cor do produto: </label>
+                                    <input type="text" id="Cor" name="Cor"
+                                        placeholder="Digite a Cor do produto"
+                                        class="form-control">
+                                    <br>
+                                    <label for="Descricao">Descricao do produto: </label>
+                                    <input type="text" id="Descricao" name="Descricao"
+                                        placeholder="Digite a Descricao do produto"
+                                        class="form-control">
+                                    <br>
+                                    <button type="submit" class="btn btn-success mt-3">Criar Aluno</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>

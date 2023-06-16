@@ -30,6 +30,7 @@ router.post('/add', async (req, res) => {
         Nome_completo: req.body.Nome_completo,
         CPF: req.body.cpf,
         data_nasc: req.body.data_nasc,
+        Tel_cel: req.body.Tel_cel,
         IDLogin: login.IDlogin,
         IDEndereco: endereco.IDEndereco
       });
